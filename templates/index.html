@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+    <title>User List</title>
+</head>
+<body>
+    <h1>Users</h1>
+        <a href="/login">
+            <button class="btn btn-primary" type="submit">Sign In?</button>
+        </a>
+    <ul>
+        {% for user in users %}
+        <li>{{ user.name }} - {{ user.email }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
